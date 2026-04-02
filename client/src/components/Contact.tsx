@@ -274,9 +274,9 @@ export default function Contact() {
                 <MapPin className="w-4 h-4 text-primary" />
                 <span className="text-xs font-mono text-muted-foreground/60">Texas, US</span>
               </div>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-emerald-500/30 bg-emerald-500/10">
+              <div className="inline-flex items-center gap-2 px-2 py-1 rounded-md border border-emerald-500/30 bg-emerald-500/10">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-                <span className="text-xs font-mono text-emerald-400">Open to work</span>
+                <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest">Open to work</span>
               </div>
             </div>
           </div>

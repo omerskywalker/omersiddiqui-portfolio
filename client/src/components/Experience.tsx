@@ -17,8 +17,8 @@ const domains = [
   {
     label: "E-commerce",
     company: "Macy's",
-    metric: "M+",
-    metricLabel: "daily users",
+    metric: "6M",
+    metricLabel: "DAU",
     description:
       "Shipped product discovery, personalization, and checkout features. Owned A/B tested experiences with measurable conversion impact.",
     tags: ["Vue.js", "TypeScript", "GraphQL", "Redis"],
@@ -91,13 +91,13 @@ export default function Experience() {
                 <div>
                   <div className="flex items-center gap-2 flex-wrap">
                     <span
-                      className="text-xs font-mono px-2 py-1 rounded-md font-medium"
+                      className="text-xs font-mono px-2 py-1 rounded-md font-medium uppercase tracking-widest"
                       style={domain.accentStyle}
                     >
                       {domain.label}
                     </span>
                     {"current" in domain && domain.current && (
-                      <span className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md border border-emerald-500/30 bg-emerald-500/10 text-xs font-mono font-medium text-emerald-400">
+                      <span className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md border-none bg-emerald-500/10 text-xs font-mono font-medium text-emerald-400 uppercase tracking-widest">
                         Current role
                       </span>
                     )}
