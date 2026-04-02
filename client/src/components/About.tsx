@@ -39,7 +39,7 @@ export default function About() {
     <section id="about" className="py-12 md:py-20 px-6" data-testid="section-about">
       <div className="max-w-5xl mx-auto">
         <FadeUp>
-          <div className="mb-16">
+          <div className="mb-8">
             <p className="font-mono text-sm text-primary/80 tracking-wider mb-4">— who I am</p>
             <h2
               className="font-display font-semibold text-foreground leading-tight"
@@ -109,7 +109,7 @@ export default function About() {
 
           <FadeUp delay={0.2}>
             <div>
-              <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-6">
+              <p className="font-mono text-xs uppercase tracking-widest text-foreground mb-6">
                 — how I think about code
               </p>
               <div className="space-y-6">

@@ -259,7 +259,7 @@ export default function Contact() {
           transition={{ duration: 0.7 }}
         >
           <div style={{ marginBottom: "40px" }}>
-            <p className="font-mono text-sm text-primary/80 tracking-wider mb-4">— let's build something</p>
+            <p className="font-mono text-sm text-primary/80 tracking-wider mb-4">— reach out</p>
             <h2
               className="font-display font-semibold text-foreground leading-tight"
               style={{ fontSize: "clamp(2rem, 8vw, 3.75rem)" }}
@@ -274,7 +274,7 @@ export default function Contact() {
                 <MapPin className="w-4 h-4 text-primary" />
                 <span className="text-xs font-mono text-muted-foreground/60">Texas, US</span>
               </div>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-emerald-500/30 bg-emerald-500/10">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
                 <span className="text-xs font-mono text-emerald-400">Open to work</span>
               </div>

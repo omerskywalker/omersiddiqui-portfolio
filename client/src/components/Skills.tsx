@@ -12,7 +12,7 @@ const cards = [
     num: "02",
     title: "End-to-end product work",
     body: "I'm most useful when I own the whole problem — not just the ticket. Schema, API, UI, observability, deployment. I've gone from Figma file to production feature at JPMorgan, Macy's, and in my own projects. I don't need someone to hand me a slice.",
-    proof: "→ Commercial Banking onboarding · Parchment · Weekbook",
+    proof: "→ JPMC Digital Banking · Parchment · Weekbook",
   },
   {
     num: "03",
@@ -41,7 +41,7 @@ export default function Approach() {
           initial={shouldReduceMotion ? {} : { opacity: 0, y: 32 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="mb-16"
+          className="mb-8"
         >
           <p className="font-mono text-sm text-primary/80 tracking-wider mb-4">— how I think</p>
           <h2

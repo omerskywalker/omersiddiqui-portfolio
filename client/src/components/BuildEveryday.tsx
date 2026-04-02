@@ -78,9 +78,9 @@ export default function BuildEveryday() {
           initial={{ opacity: 0, y: 32 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="mb-16"
+          className="mb-8"
         >
-          <p className="font-mono text-sm text-primary/80 tracking-wider mb-4">— consistency</p>
+          <p className="font-mono text-sm text-primary/80 tracking-wider mb-4">— proof of work</p>
           <h2 className="font-display font-semibold text-foreground leading-tight" style={{ fontSize: "clamp(2rem, 8vw, 3.75rem)" }}>
             Build
             <br />

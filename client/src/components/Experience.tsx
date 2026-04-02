@@ -3,6 +3,29 @@ import { useRef } from "react";
 
 const domains = [
   {
+    label: "Fintech",
+    company: "JPMorgan Chase",
+    metric: "Fortune 5",
+    metricLabel: "$3.7T AUM",
+    description:
+      "Built onboarding flows for the Commercial Investment Bank's digital banking app. Shipped full-stack features across product, design, and QA.",
+    tags: ["React", "TypeScript", "Spring Boot", "AWS"],
+    gradientStyle: { backgroundImage: "linear-gradient(135deg, rgba(17,122,202,0.14) 0%, rgba(17,122,202,0.03) 100%)" },
+    accentStyle: { background: "rgba(17,122,202,0.18)", color: "#117ACA" },
+    current: true,
+  },
+  {
+    label: "E-commerce",
+    company: "Macy's",
+    metric: "M+",
+    metricLabel: "daily users",
+    description:
+      "Shipped product discovery, personalization, and checkout features. Owned A/B tested experiences with measurable conversion impact.",
+    tags: ["Vue.js", "TypeScript", "GraphQL", "Redis"],
+    gradientStyle: { backgroundImage: "linear-gradient(135deg, rgba(255,30,30,0.14) 0%, rgba(255,30,30,0.03) 100%)" },
+    accentStyle: { background: "rgba(255,30,30,0.18)", color: "#FF2020" },
+  },
+  {
     label: "Enterprise",
     company: "Lumen Technologies",
     metric: "30K+",
@@ -14,37 +37,15 @@ const domains = [
     accentStyle: { background: "rgba(0,153,204,0.22)", color: "#0099CC" },
   },
   {
-    label: "E-commerce",
-    company: "Macy's",
-    metric: "M+",
-    metricLabel: "daily users",
-    description:
-      "Shipped product discovery, personalization, and checkout features. Owned A/B tested experiences with measurable conversion impact.",
-    tags: ["React", "TypeScript", "GraphQL", "Redis"],
-    gradientStyle: { backgroundImage: "linear-gradient(135deg, rgba(255,30,30,0.14) 0%, rgba(255,30,30,0.03) 100%)" },
-    accentStyle: { background: "rgba(255,30,30,0.18)", color: "#FF2020" },
-  },
-  {
-    label: "Open Source",
+    label: "FOSS",
     company: "Bitcoin.org / Stratum V2",
-    metric: "Protocol",
-    metricLabel: "contributor",
+    metric: "FOSS",
+    metricLabel: "enjoyer",
     description:
-      "Led efforts to add SeedSigner to Bitcoin.org and improved mining protocol documentation. Documentation-first, security-focused.",
-    tags: ["Vue", "Git", "Markdown", "CI/CD"],
+      "Led efforts to list SeedSigner on Bitcoin.org and improved Stratum V2 mining protocol documentation. Open-source contributor, not a protocol author.",
+    tags: ["VuePress", "Git", "Markdown", "CI/CD"],
     gradientStyle: { backgroundImage: "linear-gradient(135deg, rgba(245,158,11,0.14) 0%, rgba(245,158,11,0.03) 100%)" },
     accentStyle: { background: "rgba(245,158,11,0.18)", color: "#F59E0B" },
-  },
-  {
-    label: "Fintech",
-    company: "JPMorgan Chase",
-    metric: "Fortune 5",
-    metricLabel: "$3.7T AUM",
-    description:
-      "Built onboarding flows for the Commercial Investment Bank's digital banking app. Shipped full-stack features across product, design, and QA.",
-    tags: ["React", "TypeScript", "Spring Boot", "Figma", "AWS"],
-    gradientStyle: { backgroundImage: "linear-gradient(135deg, rgba(17,122,202,0.14) 0%, rgba(17,122,202,0.03) 100%)" },
-    accentStyle: { background: "rgba(17,122,202,0.18)", color: "#117ACA" },
   },
 ];
 
@@ -60,7 +61,7 @@ export default function Experience() {
           initial={{ opacity: 0, y: 32 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="mb-16"
+          className="mb-8"
         >
           <p className="font-mono text-sm text-primary/80 tracking-wider mb-4">— where I've worked</p>
           <h2
@@ -88,12 +89,19 @@ export default function Experience() {
             >
               <div className="flex items-start justify-between mb-4 gap-4 flex-wrap">
                 <div>
-                  <span
-                    className="text-xs font-mono px-2 py-1 rounded-md font-medium"
-                    style={domain.accentStyle}
-                  >
-                    {domain.label}
-                  </span>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span
+                      className="text-xs font-mono px-2 py-1 rounded-md font-medium"
+                      style={domain.accentStyle}
+                    >
+                      {domain.label}
+                    </span>
+                    {"current" in domain && domain.current && (
+                      <span className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md border border-emerald-500/30 bg-emerald-500/10 text-xs font-mono font-medium text-emerald-400">
+                        Current role
+                      </span>
+                    )}
+                  </div>
                   <h3 className="font-display text-xl font-semibold text-foreground mt-2">
                     {domain.company}
                   </h3>

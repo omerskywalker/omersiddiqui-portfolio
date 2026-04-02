@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Download, Mail, ArrowDown } from "lucide-react";
+import { Mail, ArrowDown } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
@@ -187,16 +187,9 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <a href="/attached_assets/resume.pdf" download data-testid="link-download-resume">
-                <Button size="lg" className="gap-2 font-sans">
-                  <Download className="w-4 h-4" />
-                  Download Resume
-                </Button>
-              </a>
               <Button
                 size="lg"
-                variant="outline"
-                className="gap-2 font-sans"
+                className="gap-2 font-sans bg-primary text-primary-foreground hover:brightness-90"
                 onClick={() => scrollTo("contact")}
                 data-testid="button-contact"
               >
@@ -234,7 +227,7 @@ export default function Hero() {
 
           {/* Photo column */}
           <motion.div
-            className="flex justify-center md:justify-end"
+            className="flex justify-center md:justify-end pb-12 md:pb-0"
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
