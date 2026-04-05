@@ -55,7 +55,10 @@ export default function Projects() {
           <div className="flex flex-col-reverse md:grid md:grid-cols-[1.1fr_1fr]">
             {/* Details — left on desktop, bottom on mobile */}
             <div className="p-8 md:p-10 flex flex-col justify-center border-t md:border-t-0 md:border-r border-border/60">
-              <span className="font-mono text-xs text-primary/70 uppercase tracking-widest mb-1">Featured project</span>
+              <div className="flex items-center gap-3 mb-1">
+                <span className="font-mono text-xs text-primary/70 uppercase tracking-widest whitespace-nowrap">Solo build</span>
+                <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest whitespace-nowrap">• In prod</span>
+              </div>
               <h3 className="font-display text-3xl font-semibold text-foreground mt-1 mb-3">Parchment</h3>
               <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-5">
                 A minimalist blogging platform for independent writers. No algorithmic feeds. No engagement traps. Just your words.
@@ -130,9 +133,9 @@ export default function Projects() {
           <div className="flex flex-col-reverse md:grid md:grid-cols-[1.1fr_1fr]">
             {/* Details — left on desktop, bottom on mobile */}
             <div className="p-8 md:p-10 flex flex-col justify-center border-t md:border-t-0 md:border-r border-border/60">
-              <div className="flex items-center gap-3 flex-wrap mb-1">
-                <span className="font-mono text-xs text-primary/70 uppercase tracking-widest">Personal project</span>
-                <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest">• Active Development</span>
+              <div className="flex items-center gap-3 mb-1">
+                <span className="font-mono text-xs text-primary/70 uppercase tracking-widest whitespace-nowrap">Solo build</span>
+                <span className="text-xs font-mono text-yellow-400 uppercase tracking-widest whitespace-nowrap">• In dev</span>
               </div>
               <h3 className="font-display text-3xl font-semibold text-foreground mt-1 mb-3">Weekbook</h3>
               <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-5">

@@ -83,11 +83,16 @@ export default function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ delay: i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="relative p-7 rounded-xl border border-border/50 bg-card group hover-elevate"
+              className="relative p-7 rounded-xl border border-border/50 bg-card group hover-elevate overflow-visible"
               style={domain.gradientStyle}
               data-testid={`experience-domain-${i}`}
             >
-              <div className="flex items-start justify-between mb-4 gap-4 flex-wrap">
+              {"current" in domain && domain.current && (
+                <span className="absolute -top-3 -left-3 px-2.5 py-1 rounded-md bg-emerald-500 text-xs font-mono font-medium text-black uppercase tracking-widest rotate-[-5deg] shadow-md z-10">
+                  Current role
+                </span>
+              )}
+              <div className="flex items-start justify-between mb-4 gap-4">
                 <div>
                   <div className="flex items-center gap-2 flex-wrap">
                     <span
@@ -96,17 +101,12 @@ export default function Experience() {
                     >
                       {domain.label}
                     </span>
-                    {"current" in domain && domain.current && (
-                      <span className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md border-none bg-emerald-500/10 text-xs font-mono font-medium text-emerald-400 uppercase tracking-widest">
-                        Current role
-                      </span>
-                    )}
                   </div>
                   <h3 className="font-display text-xl font-semibold text-foreground mt-2">
                     {domain.company}
                   </h3>
                 </div>
-                <div className="text-right shrink-0">
+                <div className="text-right shrink-0 whitespace-nowrap">
                   <div className="font-display text-2xl font-semibold text-foreground">{domain.metric}</div>
                   <div className="text-xs font-mono text-muted-foreground">{domain.metricLabel}</div>
                 </div>

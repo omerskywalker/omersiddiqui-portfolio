@@ -122,7 +122,8 @@ export default function Hero() {
     <section
       id="hero"
       ref={heroRef}
-      className="relative min-h-screen overflow-hidden bg-background"
+      className="relative overflow-hidden bg-background"
+      style={{ minHeight: "calc(100dvh - 4rem)" }}
       data-testid="section-hero"
     >
       {/* Diagonal background shape */}
@@ -146,8 +147,8 @@ export default function Hero() {
 
       {/* Main hero content */}
       <div
-        className="relative z-10 min-h-screen flex items-center px-6 md:px-12"
-        style={{ transform: `translateY(${parallaxY}px)` }}
+        className="relative z-10 flex items-center px-6 md:px-12"
+        style={{ minHeight: "calc(100dvh - 4rem)", transform: `translateY(${parallaxY}px)` }}
       >
         <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center pt-16">
           {/* Text column */}

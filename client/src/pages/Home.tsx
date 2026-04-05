@@ -9,7 +9,7 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div style={{ minHeight: "100dvh" }}>
       <Navigation />
       <main className="pt-16">
         <Hero />
