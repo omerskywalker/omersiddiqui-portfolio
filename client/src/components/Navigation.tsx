@@ -110,7 +110,7 @@ export default function Navigation() {
             >
               {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </Button>
-            <a href="/attached_assets/resume.pdf" download data-testid="link-resume-nav">
+            <a href="https://workspace.omerasiddiqui.replit.app" target="_blank" rel="noopener noreferrer" data-testid="link-resume-nav">
               <Button
                 size="sm"
                 className="hidden md:flex gap-2 font-sans font-medium border-0 text-black"
@@ -152,10 +152,10 @@ export default function Navigation() {
             ))}
           </div>
           <div className="mt-6 pt-6 border-t border-border">
-            <a href="/attached_assets/resume.pdf" download>
+            <a href="https://workspace.omerasiddiqui.replit.app" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="w-full gap-2 font-sans">
                 <Download className="w-4 h-4" />
-                Download Resume
+                Resume
               </Button>
             </a>
           </div>
