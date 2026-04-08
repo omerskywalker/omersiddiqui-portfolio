@@ -338,7 +338,11 @@ export default function Resume() {
 
   useEffect(() => {
     const stored = localStorage.getItem("resume-dark-mode");
-    if (stored === "true") setDarkMode(true);
+    if (stored !== null) {
+      setDarkMode(stored === "true");
+    } else {
+      setDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    }
   }, []);
 
   useEffect(() => {
@@ -355,7 +359,11 @@ export default function Resume() {
       {/* Nav */}
       <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-          <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="OS" className="w-8 h-8 rounded-lg" />
+          <img
+            src={`${import.meta.env.BASE_URL}${darkMode ? "favicon.svg" : "favicon-light.svg"}`}
+            alt="OS"
+            className="w-8 h-8 rounded-lg transition-all duration-300"
+          />
           <div className="flex items-center gap-2">
             <a
               href={`mailto:${RESUME_DATA.email}`}
