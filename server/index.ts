@@ -105,7 +105,6 @@ app.use((req, res, next) => {
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
-      // Serve the interactive resume at /resume before the SPA catch-all
       const resumePath = path.join(process.cwd(), "resume-static");
       app.use("/resume", express.static(resumePath));
       app.use("/resume/*", (_req: Request, res: Response) => {
