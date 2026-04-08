@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Moon, Sun, Menu, X, Download } from "lucide-react";
 import { useEffect, useState } from "react";
-import logoImage from "@assets/image_1762533992976.png";
+import logoImage from "@assets/logo.svg";
 
 const navLinks = [
   { label: "About", id: "about" },
@@ -80,7 +80,7 @@ export default function Navigation() {
             <img
               src={logoImage}
               alt="OS"
-              className="w-7 h-7 rounded-md object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+              className="w-7 h-7 rounded-md opacity-90 group-hover:opacity-100 transition-opacity"
             />
           </button>
 

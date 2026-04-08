@@ -355,7 +355,7 @@ export default function Resume() {
       {/* Nav */}
       <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-          <span className="font-serif font-semibold text-foreground text-lg">OS</span>
+          <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="OS" className="w-8 h-8 rounded-lg" />
           <div className="flex items-center gap-2">
             <a
               href={`mailto:${RESUME_DATA.email}`}
