@@ -105,8 +105,14 @@ app.use((req, res, next) => {
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
-    serveStatic(app);
-  }
+      // Serve the interactive resume at /resume before the SPA catch-all
+      const resumePath = path.join(process.cwd(), "resume-static");
+      app.use("/resume", express.static(resumePath));
+      app.use("/resume/*", (_req: Request, res: Response) => {
+        res.sendFile(path.join(resumePath, "index.html"));
+      });
+      serveStatic(app);
+    }
 
   // ALWAYS serve the app on the port specified in the environment variable PORT
   // Other ports are firewalled. Default to 5000 if not specified.
