@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Moon, Sun, Menu, X, Download } from "lucide-react";
 import { useEffect, useState } from "react";
-import logoImage from "@assets/logo.svg";
+import logoImage from "@assets/logo-orange.svg";
 
 const navLinks = [
   { label: "About", id: "about" },

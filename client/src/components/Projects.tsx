@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import desktopScreenshot from "@assets/image_1775025355711.png";
+import desktopScreenshot from "@assets/image_1776499560789.png";
 import weekbookScreenshot from "@assets/image_1775029189262.png";
 
 const parchmentFeatures = [
@@ -88,7 +88,7 @@ export default function Projects() {
                     Code
                   </Button>
                 </a>
-                <a href="https://parchment-blog.vercel.app" target="_blank" rel="noopener noreferrer">
+                <a href="https://parchment.blog" target="_blank" rel="noopener noreferrer">
                   <Button size="sm" className="gap-1.5 font-sans" data-testid="button-parchment-live">
                     <ExternalLink className="w-3.5 h-3.5" />
                     Live Site
@@ -107,7 +107,7 @@ export default function Projects() {
                     <div className="w-2.5 h-2.5 rounded-full bg-[#28C840]" />
                   </div>
                   <div className="flex-1 mx-2 bg-background/60 rounded text-xs font-mono text-muted-foreground/60 px-2 py-0.5 text-center truncate">
-                    parchment-blog.vercel.app
+                    parchment.blog
                   </div>
                 </div>
                 <img
