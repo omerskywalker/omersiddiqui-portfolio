@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Menu, X, Download } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 import { useEffect, useState } from "react";
 import logoImage from "@assets/logo-orange.svg";
+import ThemeToggleIcon from "@/components/effects/ThemeToggleIcon";
 
 const navLinks = [
   { label: "About", id: "about" },
@@ -108,7 +109,7 @@ export default function Navigation() {
               onClick={toggleTheme}
               data-testid="button-theme-toggle"
             >
-              {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              <ThemeToggleIcon theme={theme} />
             </Button>
             <a href="/resume" data-testid="link-resume-nav">
               <Button

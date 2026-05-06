@@ -5,6 +5,12 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import desktopScreenshot from "@assets/image_1776499560789.png";
 import weekbookScreenshot from "@assets/image_1775029189262.png";
+import SectionAccent from "@/components/effects/SectionAccent";
+
+const chipVariants = {
+  hidden: { opacity: 0, y: 8, scale: 0.85 },
+  show: { opacity: 1, y: 0, scale: 1 },
+};
 
 const parchmentFeatures = [
   "CodeMirror 6 markdown editor with live preview",
@@ -24,6 +30,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-12 md:py-20 px-6" data-testid="section-projects">
       <div className="max-w-5xl mx-auto">
+        <SectionAccent />
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 32 }}
@@ -73,13 +80,24 @@ export default function Projects() {
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-2 mb-6">
+              <motion.div
+                className="flex flex-wrap gap-2 mb-6"
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ staggerChildren: 0.05, delayChildren: 0.2 }}
+              >
                 {["Next.js 16", "React 19", "TypeScript", "PostgreSQL", "Prisma", "AWS S3", "CodeMirror 6", "Vercel"].map((tag) => (
-                  <span key={tag} className="text-xs font-mono px-2.5 py-1 rounded-md bg-muted text-muted-foreground border border-border/50">
+                  <motion.span
+                    key={tag}
+                    variants={chipVariants}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    className="text-xs font-mono px-2.5 py-1 rounded-md bg-muted text-muted-foreground border border-border/50"
+                  >
                     {tag}
-                  </span>
+                  </motion.span>
                 ))}
-              </div>
+              </motion.div>
 
               <div className="flex gap-2 flex-wrap">
                 <a href="https://github.com/omerskywalker/parchment-blog" target="_blank" rel="noopener noreferrer">
@@ -90,8 +108,8 @@ export default function Projects() {
                 </a>
                 <a href="https://parchment.blog" target="_blank" rel="noopener noreferrer">
                   <Button size="sm" className="gap-1.5 font-sans" data-testid="button-parchment-live">
-                    <ExternalLink className="w-3.5 h-3.5" />
                     Live Site
+                    <ExternalLink className="w-3.5 h-3.5" />
                   </Button>
                 </a>
               </div>
@@ -156,13 +174,24 @@ export default function Projects() {
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-2 mb-6">
+              <motion.div
+                className="flex flex-wrap gap-2 mb-6"
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ staggerChildren: 0.05, delayChildren: 0.2 }}
+              >
                 {["Ruby on Rails", "PostgreSQL", "Hotwire", "Tailwind CSS", "SMS Integration", "OpenAI API"].map((tag) => (
-                  <span key={tag} className="text-xs font-mono px-2.5 py-1 rounded-md bg-muted text-muted-foreground border border-border/50">
+                  <motion.span
+                    key={tag}
+                    variants={chipVariants}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    className="text-xs font-mono px-2.5 py-1 rounded-md bg-muted text-muted-foreground border border-border/50"
+                  >
                     {tag}
-                  </span>
+                  </motion.span>
                 ))}
-              </div>
+              </motion.div>
 
               <div className="flex gap-2 flex-wrap">
                 <a href="https://github.com/omerskywalker/weekbook" target="_blank" rel="noopener noreferrer">

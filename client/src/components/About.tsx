@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Highlight from "@/components/effects/Highlight";
+import SectionAccent from "@/components/effects/SectionAccent";
 
 const principles = [
   {
@@ -38,6 +40,7 @@ export default function About() {
   return (
     <section id="about" className="py-12 md:py-20 px-6" data-testid="section-about">
       <div className="max-w-5xl mx-auto">
+        <SectionAccent />
         <FadeUp>
           <div className="mb-8">
             <p className="font-mono text-sm text-primary/80 tracking-wider mb-4">— who I am</p>
@@ -59,8 +62,11 @@ export default function About() {
               <p className="text-foreground/90 text-lg">
                 I'm a software engineer with{" "}
                 <span className="text-foreground font-medium">7+ years</span> of experience
-                building and operating production systems across fintech, e-commerce,
-                telecom, healthcare, open-source, and enterprise environments.
+                building and operating production systems across{" "}
+                <Highlight delay={0.2}>fintech</Highlight>,{" "}
+                <Highlight delay={0.4}>e-commerce</Highlight>,
+                telecom, healthcare, open-source, and{" "}
+                <Highlight delay={0.6}>enterprise</Highlight> environments.
               </p>
               <p className="text-muted-foreground">
                 My work has spanned internal productivity platforms used by tens of thousands

@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Github, GitCommit } from "lucide-react";
+import ScrambleText from "@/components/effects/ScrambleText";
 
 interface ContributionDay {
   date: string;
@@ -172,7 +173,14 @@ export default function BuildEveryday() {
                       >
                         <GitCommit className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
                         <div className="font-mono text-sm min-w-0 flex-1">
-                          <p className="text-foreground truncate leading-snug">{commit.message}</p>
+                          <p className="text-foreground truncate leading-snug">
+                            <ScrambleText
+                              text={commit.message}
+                              triggerOnView
+                              delay={i * 80 + 200}
+                              duration={1100}
+                            />
+                          </p>
                           <div className="flex items-center gap-2 mt-0.5 flex-wrap">
                             <a
                               href={`https://github.com/omerskywalker/${commit.repo}`}
