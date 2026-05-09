@@ -209,12 +209,7 @@ export default function Hero() {
               </Button>
             </motion.div>
 
-            <motion.div
-              className="flex gap-6 pt-2"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-            >
+            <div className="flex gap-6 pt-2">
               {[
                 { label: "7+", sub: "years" },
                 { label: "1M+", sub: "users served" },
@@ -223,17 +218,36 @@ export default function Hero() {
                   label: commitsThisYear !== null ? `${commitsThisYear}+` : "—",
                   sub: "commits this year",
                 },
-              ].map((stat) => (
-                <div key={stat.sub} className="text-center" data-testid={`stat-${stat.sub.replace(/\s+/g, "-")}`}>
-                  <div className="text-2xl font-display font-semibold text-foreground">
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.sub}
+                  className="text-center"
+                  data-testid={`stat-${stat.sub.replace(/\s+/g, "-")}`}
+                  initial={{ opacity: 0, y: -36, scale: 1.18, rotate: -3 }}
+                  animate={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
+                  transition={{
+                    delay: 1.9 + i * 0.13,
+                    duration: 0.55,
+                    ease: [0.18, 0.9, 0.32, 1.15],
+                  }}
+                >
+                  <div
+                    className="text-2xl font-display font-semibold text-foreground inline-block pb-1"
+                    style={{
+                      borderBottom: "2px solid transparent",
+                      borderImageSource:
+                        "linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.6) 55%, transparent 100%)",
+                      borderImageSlice: 1,
+                    }}
+                  >
                     {stat.label}
                   </div>
-                  <div className="text-xs text-muted-foreground font-mono uppercase tracking-wider">
+                  <div className="text-xs text-muted-foreground font-mono uppercase tracking-wider mt-1">
                     {stat.sub}
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </motion.div>
+            </div>
           </div>
 
           {/* Photo column */}
