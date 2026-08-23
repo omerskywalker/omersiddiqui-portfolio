@@ -1,0 +1,53 @@
+Make the following changes to the portfolio site in one pass:
+
+---
+
+**1. Section header spacing — all section components**
+In every section component (About, Experience, Work/Projects, Build, Approach), find the `<div className="mb-16">` that wraps the eyebrow label and the section `<h2>`. Change `mb-16` to `mb-8` on all 5 instances.
+
+---
+
+**2. Reorder experience cards**
+In the Experience section, reorder the four company cards to:
+1. JPMorgan Chase
+2. Macy's
+3. Lumen Technologies
+4. Bitcoin.org / Stratum V2
+
+---
+
+**3. Standardize ALL pills/badges — radius, size, and casing**
+
+The goal is one unified badge system used everywhere. Every badge should be:
+- `rounded-md` (no `rounded-full` anywhere)
+- `text-xs` (12px) explicitly set
+- `uppercase tracking-widest` for the label text
+- Same padding: `px-2 py-1`
+- `font-mono`
+
+Apply these specific changes:
+
+**Industry tags** (Fintech, E-commerce, Enterprise, FOSS on experience cards):
+Current class: `text-xs font-mono px-2 py-1 rounded-md font-medium`
+New class: `text-xs font-mono px-2 py-1 rounded-md font-medium uppercase tracking-widest`
+
+**Tech stack tags** (React, TypeScript, etc. on experience cards):
+Current class: `text-xs font-mono px-2 py-1 rounded-md bg-background/60 text-muted-foreground border border-border/40`
+No change needed — these are lower-hierarchy labels, keep as-is (no uppercase for tech names like "Vue.js", "GraphQL" etc. — they are proper nouns/casing matters)
+
+**Project tech stack tags** (Next.js, PostgreSQL, etc. on project cards):
+Same as above — keep as-is, no uppercase for proper-noun tech names.
+
+**"Current role" badge on the JPMorgan Chase card:**
+New class: `inline-flex items-center gap-1.5 px-2 py-1 rounded-md border border-emerald-500/30 bg-emerald-500/10 text-xs font-mono font-medium text-emerald-400 uppercase tracking-widest`
+
+**"Active Development" label on the Weekbook card:**
+It is currently plain text (no box). Keep it plain — just ensure it matches the "Personal project" label exactly:
+`text-xs font-mono text-emerald-400 uppercase tracking-widest`
+Keep the `•` dot prefix.
+
+**"Open to work" pill in the Contact section:**
+The outer wrapper has a missing `text-xs` causing it to inherit a large font size. The inner text span also needs uppercase.
+Outer wrapper new class: `inline-flex items-center gap-2 px-2 py-1 rounded-md border border-emerald-500/30 bg-emerald-500/10`
+Inner text span new class: `text-xs font-mono text-emerald-400 uppercase tracking-widest`
+Keep the animated pulse dot span (`w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0`) unchanged.

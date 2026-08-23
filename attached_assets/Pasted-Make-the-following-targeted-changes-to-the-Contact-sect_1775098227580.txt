@@ -1,0 +1,54 @@
+Make the following targeted changes to the Contact section only. Do not change anything else.
+
+---
+
+### 1. PILL BADGE — Shrink back to a compact pill and relocate
+
+The "Open to work" pill badge is currently stretching to full column width like a bar. Fix it and move it.
+
+**Style fix:**
+- Remove any `width: 100%` or `w-full` class from the badge container
+- The badge should be `display: inline-flex` with `align-self: flex-start` — it should hug its content width only, not stretch
+- Keep all other badge styling exactly as-is (pulsing dot, emerald colors, border, rounded-full)
+
+**Relocation:**
+- Remove the badge from its current position in the left column (where it sits above the terminal)
+- Move it into the full-width heading block above the grid, on the same line as the Texas location tag
+- The Texas line should now read as a horizontal row: `[pin icon] Texas, US` on the left, then a small gap, then the `[dot] Open to work` pill on the same line
+- Implement this as a flex row: `display: flex; align-items: center; gap: 16px;`
+- The Texas tag and the pill badge sit side by side as siblings in this row
+
+---
+
+### 2. LEFT COLUMN — After badge removal
+
+After removing the pill badge, the left column should contain only:
+1. The terminal window component (full width, full height of column)
+
+Remove any gap or spacing that was previously between the badge and the terminal — the terminal should now be the only item in the left column and should fill the full column height with `flex: 1` or `height: 100%`.
+
+---
+
+### 3. LINKEDIN CARD — Fill full column width edge to edge
+
+The LinkedIn card content appears narrower than the terminal. Ensure:
+- The LinkedIn card outer container has `width: 100%` and no `max-width` set
+- Remove any centering (`mx-auto`) on the card
+- The card should fill its column exactly the same way the terminal fills its column
+- The `View LinkedIn Profile →` button should be full width within the card (`width: 100%`)
+- The banner at the top of the card should span the full card width with no internal horizontal padding clipping it
+
+---
+
+### 4. EQUAL HEIGHT ENFORCEMENT
+
+Both the terminal and the LinkedIn card should be the same height. Enforce this by:
+- Setting the grid to `align-items: stretch`
+- Left column: `display: flex; flex-direction: column; height: 100%;` — terminal fills it with `flex: 1`
+- Right column: `display: flex; flex-direction: column; height: 100%;` — LinkedIn card fills it with `flex: 1` and `height: 100%`
+- Terminal code body: `flex: 1` so it grows to fill available terminal height
+- LinkedIn card body: `flex: 1; display: flex; flex-direction: column;` with the button section having `margin-top: auto` to pin to the bottom
+
+---
+
+Make no other changes anywhere on the page.

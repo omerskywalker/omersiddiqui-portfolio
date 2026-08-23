@@ -1,0 +1,98 @@
+Make the following change to the Contact section only. Do not modify any other section, layout, animation, or copy anywhere on the page.
+
+---
+
+### CONTACT SECTION — Replace right column with a LinkedIn-style profile card
+
+Currently the right column contains only a short closing statement paragraph. Replace the entire right column with a styled LinkedIn-inspired profile card component. The card should feel like a dark-mode reimagining of a LinkedIn profile preview — clearly referencing the format without copying LinkedIn's visual brand directly.
+
+---
+
+### CARD STRUCTURE
+
+The card is a single self-contained component. Build it as follows, top to bottom:
+
+**1. Banner area (top of card)**
+- A dark banner strip across the top of the card, approximately 80px tall
+- Background: a very subtle dark gradient, e.g. `linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)` — dark navy, slightly different from the card background so it reads as a distinct zone
+- Inside the banner, right-aligned text:
+  - Line 1: `OMER SIDDIQUI` in bold uppercase, large, white — font size ~1.1rem, letter-spacing wide
+  - Line 2: `SOFTWARE ENGINEER` in a smaller monospace font, muted color (slate-400)
+  - Line 3: `frontend / backend / systems` in the same small monospace, muted
+
+**2. Avatar**
+- Positioned overlapping the bottom of the banner and the top of the card body (negative margin-top to create the overlap effect — standard LinkedIn profile layout)
+- Use the cartoon avatar image already used in the hero section of the site (the illustrated portrait — reuse the same image source already in the project)
+- Circular crop: `border-radius: 50%`
+- Size: 72px × 72px
+- Border: 3px solid the card background color (so it appears to "cut out" from the banner)
+- Position: left-aligned, approximately 20px from the left edge of the card
+
+**3. Card body (below the banner/avatar zone)**
+- Background: same dark card background used elsewhere on the site
+- Padding: 16px 20px 20px 20px
+- The avatar overlaps into this zone from above — leave enough top padding (approximately 40px) so the avatar doesn't cover the name text
+
+**4. Name and meta**
+- Name: `Omer Siddiqui` in bold, white, font-size ~1rem
+- Below name: `Dallas, Texas · Software Engineer` in small muted body text (slate-400), font-size ~0.8rem
+- Below that: a small row showing a subtle LinkedIn-blue dot (color: `#0A66C2`, size 8px circle) followed by the text `linkedin.com/in/omerasiddiqui` in the same small muted font
+
+**5. Divider**
+- A 1px horizontal rule in `rgba(255,255,255,0.08)` separating the name/meta from the links below
+
+**6. Social links row (inside the card)**
+- A compact row of three icon+label pairs, displayed horizontally with space between them
+- Each pair: small platform icon (reuse icons already in the codebase) + handle text in small monospace
+  - GitHub: `omerskywalker` → links to https://github.com/omerskywalker
+  - X/Twitter: `@0merskywalker` → links to https://x.com/0merskywalker  
+  - Email: `oasiddiqui1@gmail.com` → links to mailto:oasiddiqui1@gmail.com
+- All links open in new tab with `rel="noopener noreferrer"` except mailto
+- On hover: icon and text shift to orange accent color
+- Font size: 0.72rem
+
+**7. View Profile CTA button**
+- Full-width button at the bottom of the card
+- Text: `View LinkedIn Profile →`
+- Style: filled background using `#0A66C2` (LinkedIn blue) at 90% opacity — this is the one intentional nod to LinkedIn's brand color, used sparingly just on this button
+- Text color: white
+- Border-radius: match the site's existing button border-radius
+- On hover: full opacity, slight brightness increase
+- Links to: https://linkedin.com/in/omerasiddiqui — opens in new tab
+
+---
+
+### CARD OUTER STYLING
+
+- Border: 1px solid `rgba(255,255,255,0.08)`
+- Border-radius: match other cards on the site (likely 12px or 16px — match exactly)
+- Background: same dark card background used on project cards and experience cards
+- No box-shadow by default
+- On hover: subtle box-shadow glow — `0 0 24px rgba(255,255,255,0.04)`
+- The card should have a max-width of 380px and be centered in the right column on desktop
+- On mobile the card should be full width and stack below the left column content
+
+---
+
+### CLOSING STATEMENT
+
+Move the closing paragraph text:
+`Whether you're hiring, collaborating on something in the Bitcoin space, or just want to talk systems — my inbox is open.`
+
+Place it directly above the LinkedIn card in the right column, as plain body text with no card or background. Add `margin-bottom: 24px` between this text and the card. The text should be slightly muted (slate-300) and font-size slightly smaller than the main body — treat it as a warm-up line before the card, not a headline.
+
+---
+
+### LAYOUT
+
+Right column on desktop should now contain, top to bottom:
+1. The closing statement paragraph (plain text)
+2. The LinkedIn-style profile card
+
+Left column remains unchanged: availability badge, then the four social link rows (email, GitHub, LinkedIn, X/Twitter).
+
+On mobile: single column, order is — availability badge, social links, closing statement, LinkedIn card.
+
+---
+
+Make no other changes anywhere on the page.

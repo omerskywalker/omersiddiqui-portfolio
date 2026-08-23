@@ -1,0 +1,38 @@
+Fix the following issues in the Contact section. Do not change anything else.
+
+---
+
+### 1. AVATAR — Final fix: use the illustrated portrait
+
+The avatar inside the LinkedIn card is still showing the real photograph. This needs to use the illustrated/cartoon avatar from the hero section.
+
+Inspect the hero section component and find the exact `src` attribute of the `<img>` tag rendering the illustrated portrait (the cartoon avatar with sunglasses). Use that exact same `src` value for the avatar `<img>` inside the LinkedIn card. Do not hotlink any external URL — use only the file already in the project assets.
+
+---
+
+### 2. AVATAR — Overlap the banner seam
+
+The avatar must visually straddle the bottom edge of the dark banner strip and the top of the card body. Currently it sits entirely below the banner.
+
+Fix:
+- Set the banner div to `position: relative` and `overflow: visible`
+- Set the avatar `<img>` to `position: absolute`, `bottom: -40px`, `left: 20px`
+- Set the card body container to `padding-top: 60px` so name text begins below the overlapping avatar
+- Avatar dimensions: `80px × 80px`, `border-radius: 50%`, border: `3px solid` using the card's own background color
+
+---
+
+### 3. SECTION LAYOUT — Make the heading span full width, grid starts below
+
+Currently the section heading ("Let's build something.", "Open to the right role.", Texas tag) is in the left column only, leaving the entire upper right of the section empty.
+
+Fix the layout so:
+- The section label (`— let's build something`), the heading (`Let's build something.`), the subtext (`Open to the right role.`), and the Texas location tag all span the full width of the section — outside the two-column grid, above it
+- The two-column grid begins below the heading block, starting with the "Open to work" badge on the left and the closing statement + LinkedIn card on the right
+- Add `margin-top: 48px` between the heading block and the two-column grid
+
+This eliminates the large dead zone in the upper right and makes the heading feel like a proper section intro rather than left-column content.
+
+---
+
+Make no other changes anywhere on the page.

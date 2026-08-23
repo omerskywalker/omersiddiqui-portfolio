@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2a1a0d"/>
+      <stop offset="1" stop-color="#180c04"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="10" fill="url(#bg)"/>
+  <rect x="1.5" y="1.5" width="45" height="45" rx="8.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" fill="none"/>
+  <text
+    x="24" y="30"
+    text-anchor="middle"
+    font-family="Georgia, 'Palatino Linotype', Palatino, serif"
+    font-size="19"
+    font-style="italic"
+    font-weight="700"
+    letter-spacing="1.5"
+    fill="#f8fafc">OS</text>
+  <rect x="14" y="35.5" width="20" height="1.5" rx="0.75" fill="#f7931a"/>
+</svg>

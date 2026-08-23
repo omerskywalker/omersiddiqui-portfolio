@@ -1,0 +1,52 @@
+Fix the Contact section layout completely. The current structure has the section heading ("Let's build something.", "Open to the right role.", Texas tag) in a separate full-width block above the two-column grid, which creates a staircase/diagonal effect. This needs to be restructured.
+
+---
+
+### TARGET LAYOUT
+
+The entire contact section content should live inside a single two-column grid. There is no full-width heading block above the grid. Everything is in one of the two columns.
+
+**Left column (top to bottom):**
+1. Section label: `— let's build something` (monospace, muted)
+2. Heading: `Let's build` / `something.` (large serif, italic orange on line 2)
+3. `Open to the right role.` (body text)
+4. Texas location tag (pin icon + "Texas, US" in muted monospace)
+5. `Open to work` availability badge (with pulsing dot)
+6. Social links list (email, GitHub, LinkedIn, X/Twitter — icon + handle, no cards)
+
+**Right column (top to bottom):**
+1. Closing statement paragraph: `Whether you're hiring, collaborating on something in the Bitcoin space, or just want to talk systems — my inbox is open.`
+2. The LinkedIn profile card
+
+---
+
+### GRID SPECIFICATIONS
+
+- Use `display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;`
+- Both columns begin at the exact same vertical position — no margin-top, no padding-top on either column
+- Left column: `display: flex; flex-direction: column; gap: 20px;` — stacks all items with consistent spacing
+- Right column: `display: flex; flex-direction: column; gap: 16px;` — closing paragraph sits directly above the card
+- On mobile (below `md` breakpoint): single column, left column content first, right column content below
+
+---
+
+### SPACING BETWEEN LEFT COLUMN ITEMS
+
+Add these specific gaps between items in the left column:
+- After the heading block (label + heading): `margin-bottom: 8px`
+- After "Open to the right role." + Texas tag group: `margin-bottom: 24px`
+- After the "Open to work" badge: `margin-bottom: 8px`
+- Social links: `gap: 14px` between each row
+
+---
+
+### DO NOT CHANGE
+
+- The LinkedIn card component itself — keep all its current styling, content, and structure exactly as-is
+- The closing statement paragraph text
+- The social links content and their href targets
+- Any other section on the page
+
+---
+
+Make only these structural layout changes. Do not alter any copy, colors, or component-level styling.

@@ -1,0 +1,47 @@
+Make the following mobile-specific layout fixes. Desktop appearance must remain completely unchanged for all of these. Only apply changes at the mobile breakpoint (below `md`, i.e. below 768px).
+
+---
+
+### 1. BUILD SECTION — Contribution graph on mobile
+
+Currently on mobile the contribution graph is pushed to the right side of the card with no centering, the squares are small, and the github username/contribution count header is misaligned.
+
+Fix the mobile layout of the entire Build card (the `rounded-xl border` card containing the graph and recent commits):
+
+**Card layout on mobile:**
+- Stack the two columns (graph column and recent commits column) vertically — graph on top, recent commits below
+- Remove any horizontal divider between them on mobile; add a horizontal border-bottom below the graph section instead
+- The graph section should be full width on mobile
+
+**Contribution graph centering:**
+- Center the graph grid horizontally within its container: `display: flex; justify-content: center; align-items: center;`
+- Add equal padding on left and right: `padding: 20px`
+- The `github.com/omerskywalker` link and `369 contributions` count should also be centered on mobile: `text-align: center` or flex centered
+
+**Square size on mobile:**
+- Increase the size of each contribution day square from its current size to `14px × 14px` with `gap: 3px` between squares
+- This makes the grid fill more of the available mobile width and feel more intentional
+- The overall grid width at 14px squares with 3px gaps across ~14 columns = ~(14×14)+(13×3) = ~235px — this should fit comfortably centered on a 390px mobile screen
+
+**Less/More legend:**
+- Center the Less/More legend below the graph: `display: flex; justify-content: center;`
+
+---
+
+### 2. FOOTER — Mobile layout fix
+
+The footer currently uses `flex flex-wrap items-center justify-between` which causes the copyright line and nav links to wrap awkwardly on mobile — the links break into multiple uneven rows.
+
+Fix the mobile footer layout:
+
+- On mobile, change the footer inner container to `flex-direction: column; align-items: center; text-align: center; gap: 16px`
+- The copyright line (`© 2026 Omer Siddiqui`) should appear first, centered
+- The nav links row should appear below it, centered
+- The nav links should wrap into a maximum of 2 rows of 3 links each if needed, with `justify-content: center` and `gap: 12px 20px`
+- All footer text remains the same size and style — only the layout direction changes
+
+On desktop (`md` and above): keep the existing `flex-wrap items-center justify-between` layout exactly as-is. Copyright left, links right.
+
+---
+
+Make no other changes anywhere on the page. Desktop appearance must be pixel-perfect identical to current.

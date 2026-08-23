@@ -1,0 +1,64 @@
+Restructure the Contact section layout for visual symmetry. Make the following specific changes. Do not alter any other section or any copy.
+
+---
+
+### 1. REMOVE "Open to the right role." line
+
+Delete the paragraph/div containing the text `Open to the right role.` from the left column entirely. It is redundant with the "Open to work" pill badge. Do not replace it with anything.
+
+---
+
+### 2. RESTRUCTURE: Pull heading block above the grid
+
+Currently the section label, heading, and Texas location tag are inside the left column of the two-column grid. This is causing the left column to start much higher than the right column, creating an unbalanced diagonal layout.
+
+Fix: Move the following elements OUT of the left column and INTO a full-width block that sits ABOVE the two-column grid:
+- The section label: `— let's build something`
+- The heading: `Let's build` / `something.`
+- The Texas location tag (pin icon + "Texas, US")
+
+These three elements should stack vertically in the full-width block, flush left, with `margin-bottom: 40px` between this block and the grid below it.
+
+---
+
+### 3. LEFT COLUMN — after the restructure
+
+After moving the heading block out, the left column should contain only:
+1. The "Open to work" pill badge (keep exactly as-is)
+2. The terminal window component (keep exactly as-is)
+
+Add `gap: 20px` between the badge and the terminal.
+The left column should use `display: flex; flex-direction: column; align-items: flex-start;`
+
+---
+
+### 4. RIGHT COLUMN — after the restructure
+
+The right column remains as-is:
+1. The closing statement paragraph
+2. The LinkedIn profile card
+
+Add `gap: 16px` between the paragraph and the card.
+The right column should use `display: flex; flex-direction: column; align-items: flex-start;`
+
+---
+
+### 5. GRID ALIGNMENT
+
+- The two-column grid: `display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;`
+- Both columns must begin at the exact same vertical position — no margin-top or padding-top on either column
+- The terminal (left) and the LinkedIn card (right) should feel like two equal panels sitting side by side at the same level
+- On mobile: single column, full-width heading block first, then left column content, then right column content
+
+---
+
+### 6. VISUAL BALANCE CHECK
+
+After implementing, the two columns should have roughly equal visual weight:
+- Left: pill badge (small) + terminal window (tall)
+- Right: one-line paragraph (small) + LinkedIn card (tall)
+- The terminal and LinkedIn card should be approximately the same height — if the terminal is significantly shorter than the LinkedIn card, add `min-height` to the terminal body so they feel paired
+
+---
+
+Make no other changes anywhere on the page.

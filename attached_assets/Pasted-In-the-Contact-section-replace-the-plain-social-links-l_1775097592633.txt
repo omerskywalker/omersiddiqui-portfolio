@@ -1,0 +1,42 @@
+In the Contact section, replace the plain social links list (the four icon+handle rows for email, GitHub, LinkedIn, and X/Twitter) with a styled terminal window component. Do not change anything else in the Contact section or anywhere else on the page.
+
+---
+
+### COMPONENT: Terminal Window
+
+Build a self-contained terminal window component that mimics a macOS-style code editor/terminal. It should feel like a dark IDE window — polished, not cartoonish.
+
+---
+
+### 1. TERMINAL CHROME (top bar)
+
+- A horizontal bar across the top of the component, approximately 36px tall
+- Background: slightly lighter than the card body — use `#1e1e2e` or similar dark but distinct tone
+- Border-radius on top-left and top-right corners matching the outer card (12px or 16px — match the LinkedIn card)
+- Left side of the bar: three circles in a row (the macOS traffic lights)
+  - Red: `#FF5F57`, diameter 12px
+  - Yellow: `#FFBD2E`, diameter 12px  
+  - Green: `#28C840`, diameter 12px
+  - Gap between circles: 8px
+  - Left padding from edge: 16px
+  - The circles should be purely decorative — no click behavior needed
+- Right side of the bar (or center): a filename tab styled like a VS Code tab
+  - Tab text: `omer.contact.json`
+  - Tab style: small monospace font, font-size 0.75rem, color slate-300
+  - Tab background: slightly lighter than the bar — `#2a2a3e` or similar
+  - Tab has a left and right padding of 12px, full height of the bar
+  - A small dot indicator to the left of the filename (a 6px circle in the orange accent color) indicating "unsaved/active file"
+
+---
+
+### 2. TERMINAL BODY (code area)
+
+- Background: `#13131f` or the darkest available dark color in the palette — should feel like a true code editor background
+- Border-radius on bottom-left and bottom-right corners: match the card
+- Padding: `20px 24px`
+- Font: monospace (use the site's existing monospace font stack)
+- Font-size: `0.82rem`
+- Line-height: `1.8`
+- No scrollbar — the content fits in full
+
+**Content — render the following JSON with syntax highlighting:**

@@ -1,0 +1,128 @@
+You are improving a personal SWE portfolio site for Omer Siddiqui. The site uses a dark navy theme with a grid background, serif + italic typographic pairings, and a teal/cyan (#38BDF8) accent color. Below is a full list of enhancements to implement. Work through them section by section.
+
+---
+
+### 1. NAVIGATION — Make it sticky and always visible
+
+- Add a sticky navbar that appears after scrolling past the hero (use IntersectionObserver on the hero section)
+- The sticky nav should have a frosted glass background: `background: rgba(10, 15, 30, 0.85); backdrop-filter: blur(12px);`
+- Show the name "OS" as a monogram logo on the left of the sticky nav
+- Nav links: About · Experience · Projects · Build · Skills · Contact
+- Add a smooth underline hover animation on nav links using CSS `::after` pseudo-element
+- Include a "Resume" pill button on the far right of the sticky nav (outline style, teal border)
+- Add a hamburger menu for mobile that slides in a full-screen nav overlay
+
+---
+
+### 2. HERO SECTION — Improve layout and animations
+
+- Fix the layout so the text column and avatar column are vertically centered relative to each other, with equal visual weight on both halves
+- Add a subtle animated gradient glow behind the avatar circle (keyframe animation cycling between teal and indigo)
+- Add a typewriter effect to the subtitle "— software engineer" that types in on page load (use a CSS animation or lightweight JS)
+- Move the stats bar (6+ years, 30K+ users, 4 domains) so it is fully visible without scrolling — reduce hero height slightly if needed
+- Add a 4th stat: "366 commits" with label "this year"
+- Animate the stats counting up from 0 when the hero loads (use requestAnimationFrame or CountUp.js pattern)
+- The "LET'S WORK TOGETHER →" button at the top center should either be removed or repositioned into the nav as a CTA
+
+---
+
+### 3. COLOR PALETTE — New accent scheme
+
+Replace the current single teal accent (#38BDF8) with a dual-accent palette:
+- Primary accent: `#6EE7B7` (emerald mint) — use for italic headings and primary CTA buttons
+- Secondary accent: `#818CF8` (soft indigo/violet) — use for tag pills, monospace labels, and hover states
+- Keep the dark background: `#0A0F1E` (deep navy)
+- Slightly lighten the grid lines: `rgba(255,255,255,0.04)`
+- Body text: `#CBD5E1` (slate-200) instead of pure white — easier on the eyes
+- Muted labels (like "— who I am"): `#64748B` (slate-500)
+- Update all teal references to use this new dual palette consistently
+
+---
+
+### 4. ABOUT SECTION — Expand and add visual interest
+
+- Split the "who I am" section into a two-column layout on desktop: left = text, right = a vertical timeline of milestones
+- Add a vertical timeline on the right with 4–5 entries (e.g., "2019 — Started at JPMorgan", "2021 — Macy's, shipped personalization at scale", "2023 — Lumen, led 100+ automation tools", "2025 — Open source contributor, Bitcoin.org")
+- Timeline dots should pulse with a CSS animation using the primary accent color
+- Move the hobbies (lifting weights / reading books / playing chess) into small icon cards with an emoji or SVG icon — lay them out horizontally instead of inline text links
+- The 3 philosophy principles (Correctness / Constraint-driven / Long-term) should each have a large numbered glyph ("01", "02", "03") styled in a very large, low-opacity font behind the card for visual depth
+
+---
+
+### 5. EXPERIENCE SECTION — Improve cards
+
+- Give each domain card a subtle left border accent (4px) using the secondary accent color
+- Add a hover state: card lifts slightly with `transform: translateY(-4px)` and shows a soft glow `box-shadow`
+- Expand the Macy's card to show the actual impact metric: replace "M+ daily users" with "~1M daily users" for clarity
+- Add estimated date ranges as small monospace text in the top-right of each card (e.g., "2021–2023")
+- Add a "View more" expand/collapse on each card to reveal 1–2 more bullet points of detail (currently cards are very sparse)
+
+---
+
+### 6. PROJECTS SECTION — Elevate the "Other Work" cards
+
+- Give Weekbook, Debunk the FUD, and Bitcoin.org the same card treatment as Parchment (large card with a top image/screenshot area)
+- For each "Other Work" card, add a placeholder screenshot region (a styled div with a gradient or pattern) if no real screenshot is available
+- Add a "What I built" tag to distinguish personal projects from OSS contributions
+- For the featured Parchment card: add a subtle shimmer/shine animation on the card border on hover
+- Tech stack pill badges: switch to the new dual-accent pill style — mint background at 15% opacity with mint text
+
+---
+
+### 7. GITHUB SECTION — Polish the build graph
+
+- Add a label showing the current year and month range below the contribution graph
+- Add a "streak" callout: compute and display the longest streak or current streak visually
+- Add a fade-in animation when the section scrolls into view
+- Style the recent commits list with monospace font for the commit hash, and show the commit message truncated at 60 chars with an ellipsis
+
+---
+
+### 8. SKILLS SECTION — Fix truncation and add visual hierarchy
+
+- Fix all truncated descriptions — show the full text. Use a tooltip on hover if space is tight, or switch to a two-line layout
+- Group the skills into 4 clear quadrants using a 2x2 grid on desktop: Languages · Frontend · Backend · Infrastructure
+- Add proficiency indicators — use a simple 3-level dot system (●●● Expert, ●●○ Proficient, ●○○ Familiar) next to each skill
+- Add logos/icons for each technology (use Devicons CDN: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/)
+
+---
+
+### 9. CONTACT SECTION — Make it actionable and visual
+
+- Replace the plain-text social links with icon buttons (use SVG icons for GitHub, LinkedIn, X/Twitter, Email)
+- Style the icon buttons as square pill cards with a hover glow effect using the secondary accent
+- Replace the generic quote "The best time to start is now." with something more specific to Omer's voice, e.g.: "I write software that doesn't apologize for existing."
+- Add a simple contact form (Name, Email, Message, Send button) that uses a mailto: fallback or a service like Formspree
+- Show Omer's current status with a live-looking badge: 🟢 Open to work · Senior Engineer roles
+
+---
+
+### 10. SCROLL ANIMATIONS — Add motion throughout
+
+- Use IntersectionObserver to trigger fade-in + slide-up animations on every section as it enters the viewport
+- Section headers should animate with a 0.3s delay after the section enters
+- Cards should stagger-animate in with 100ms delays between each card
+- Use `opacity: 0; transform: translateY(20px)` as the initial state and transition to `opacity: 1; transform: translateY(0)` on entry
+- Respect `prefers-reduced-motion` media query — disable all animations if the user has it set
+
+---
+
+### 11. FOOTER — Clean up
+
+- Add the full set of social icon links (GitHub, LinkedIn, X/Twitter, Email) in the footer as icon-only buttons
+- Add a "Back to top ↑" button on the right side of the footer
+- Change copyright year to be dynamically set from `new Date().getFullYear()`
+
+---
+
+### 12. PERFORMANCE & SEO
+
+- Add proper `<meta>` tags: description, og:title, og:description, og:image (use the avatar as og:image)
+- Add `<meta name="theme-color" content="#0A0F1E">` for mobile browser chrome
+- Ensure all images have descriptive `alt` attributes
+- Add `rel="noopener noreferrer"` to all external links
+- Add a `<link rel="canonical">` tag pointing to the deployed URL once known
+
+---
+
+Make all changes incrementally, confirming the page renders correctly after each major section change. Preserve all existing content — do not remove any text, projects, or experiences. Only add, style, or restructure.

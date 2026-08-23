@@ -1,0 +1,42 @@
+Replace with:
+- Line 1 (regular weight serif): `Let's build`
+- Line 2 (italic, orange accent): `something.`
+
+Match the existing heading style exactly — same font sizes, same italic accent color treatment on line 2.
+
+#### 2b. Location line and availability text
+
+Find: `Based in Texas, United States. Open to senior engineering roles and Bitcoin open-source collaborations.`
+
+Replace with a single line:
+`Open to the right role.`
+
+Directly beneath that line, add the Texas location as a small inline element:
+- A small Texas state outline SVG icon (draw it as a simple recognizable silhouette of Texas — no fill, just a stroke path in the shape of the state, colored with the Texas flag red `#BF0A30` or the orange accent color)
+- Immediately followed by the text `Texas, US` in muted monospace (slate-400 equivalent)
+- The icon and text should sit on the same line, icon left of text, with a small gap between them
+- The whole thing should be smaller than the body text above it — treat it as a location tag, not a headline
+
+#### 2c. Simplify the social links — remove the cards
+
+Replace the four large social link cards (Email, GitHub, LinkedIn, X/Twitter) with a compact, clean list. Each item should be:
+- A single row: icon on the left, handle text to the right
+- No card background, no border, no rounded box — just the row itself on a transparent background
+- Subtle hover state: handle text shifts to accent color
+- Stack them vertically with consistent spacing
+- Keep the same four links and their href targets:
+  - Email icon → mailto:oasiddiqui1@gmail.com
+  - GitHub icon → https://github.com/omerskywalker (open in new tab)
+  - LinkedIn icon → https://linkedin.com/in/omerasiddiqui (open in new tab)
+  - X/Twitter icon → https://x.com/0merskywalker (open in new tab)
+- Use the existing icon style already in the codebase for each platform (the icons are already present in the card version — reuse them)
+
+#### 2d. Right column — replace quote card and remove Download Resume
+
+Remove the quote card that contains `"I write software that doesn't apologize for existing."` and its body text.
+
+Remove the `Download Resume` button entirely from this section.
+
+Keep the availability badge (`Open to work · Senior Engineer roles` pill with the pulsing dot). Reposition it above the social links list as the first element in the left column.
+
+Replace the entire right column with a single short closing statement in large-ish body text, left-aligned:

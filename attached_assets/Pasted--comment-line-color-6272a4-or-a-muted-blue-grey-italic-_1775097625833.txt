@@ -1,0 +1,79 @@
+*(comment line — color: `#6272a4` or a muted blue-grey, italic)*
+
+Then one blank line, then:
+```json
+{
+  "name": "Omer Siddiqui",
+  "role": "Software Engineer",
+  "location": "Dallas, Texas",
+  "status": "open_to_work",
+  "email": "oasiddiqui1@gmail.com",
+  "github": "github.com/omerskywalker",
+  "linkedin": "linkedin.com/in/omerasiddiqui",
+  "twitter": "x.com/0merskywalker"
+}
+```
+
+**Syntax highlighting rules:**
+- Curly braces `{` `}`: white or slate-200
+- Keys (the quoted strings on the left of `:`): soft indigo/violet — `#bd93f9` or the site's secondary accent color
+- Colon `:`: white or slate-300
+- String values (the quoted strings on the right of `:`): soft green/mint — `#50fa7b` or the site's primary accent color
+- Commas: slate-400
+- The comment line `// omer.contact.json`: muted blue-grey `#6272a4`, italic
+
+**Clickable values — make these specific values into working hyperlinks:**
+- `"oasiddiqui1@gmail.com"` → `mailto:oasiddiqui1@gmail.com`
+- `"github.com/omerskywalker"` → `https://github.com/omerskywalker` (new tab)
+- `"linkedin.com/in/omerasiddiqui"` → `https://linkedin.com/in/omerasiddiqui` (new tab)
+- `"x.com/0merskywalker"` → `https://x.com/0merskywalker` (new tab)
+
+Link styling for clickable values:
+- Default state: same green/mint color as other string values — no underline
+- Hover state: underline appears, color brightens slightly
+- Cursor: `pointer`
+- All links: `rel="noopener noreferrer"` where applicable
+
+**Non-clickable values** (`"Omer Siddiqui"`, `"Software Engineer"`, `"Dallas, Texas"`, `"open_to_work"`): same mint/green color, no link, `cursor: default`
+
+---
+
+### 3. BLINKING CURSOR
+
+After the closing `}` on the last line, add a blinking cursor character:
+- Render as a `<span>` containing a `|` character (pipe)
+- Color: the orange accent color
+- Animation: CSS keyframe that toggles opacity between 1 and 0
+```css
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+animation: blink 1.1s step-end infinite;
+```
+- The cursor should appear on the same line as the closing `}`, immediately after it with a small left margin (4px)
+
+---
+
+### 4. OUTER CONTAINER STYLING
+
+- Border: `1px solid rgba(255,255,255,0.08)`
+- Border-radius: match the LinkedIn card exactly
+- No box-shadow by default
+- On hover: `box-shadow: 0 0 24px rgba(255,255,255,0.04)` — same subtle glow as the LinkedIn card
+- The component should be full width within the left column — do not set a max-width, let it fill the column
+
+---
+
+### 5. PLACEMENT
+
+The terminal window replaces the four icon+handle social link rows in the left column. Place it in the exact position where those rows were — below the "Open to work" badge, filling the remaining left column space.
+
+Remove the four old social link rows (email, GitHub, LinkedIn, X/Twitter icon+handle rows) entirely. The terminal component is their replacement.
+
+Do not remove or change the "Open to work" badge above it.
+Do not change the LinkedIn card, closing statement, or any other element.
+
+---
+
+Make no other changes anywhere on the page.

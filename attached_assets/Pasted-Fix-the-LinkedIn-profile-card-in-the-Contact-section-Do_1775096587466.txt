@@ -1,0 +1,62 @@
+Fix the LinkedIn profile card in the Contact section. Do not change anything else on the page.
+
+---
+
+### 1. AVATAR IMAGE — Use the correct source
+
+The avatar currently rendering inside the card is pulling from the wrong source (it is showing a LinkedIn screenshot thumbnail). Replace it with the same illustrated/cartoon portrait image used in the hero section of this site. Use the exact same image file path/src that the hero avatar uses. Do not fetch or link to any external image.
+
+---
+
+### 2. AVATAR POSITIONING — Fix the overlap
+
+The avatar should sit centered on the seam between the banner and the card body — half overlapping the banner bottom, half overlapping the card body top. Achieve this with:
+- `position: absolute` on the avatar
+- `bottom: -36px` relative to the banner (or `top: calc(100% - 36px)` on the banner)
+- `left: 20px`
+- The card body should have `padding-top: 48px` to prevent name text from being covered by the avatar
+
+The banner text (OMER SIDDIQUI / SOFTWARE ENGINEER / frontend / backend / systems) should remain right-aligned in the banner and should not be obscured by the avatar.
+
+---
+
+### 3. CARD SIZE — Increase width and internal padding
+
+- Set the card `max-width` to `460px` (up from 380px)
+- Increase internal padding on the card body to `20px 24px 24px 24px`
+- Increase the banner height to `100px` to give the banner text more room to breathe
+- Increase the name font-size to `1.1rem`
+- Increase spacing between name, location line, and LinkedIn URL line — use `margin-bottom: 6px` between each
+
+---
+
+### 4. REMOVE the social links row inside the card
+
+Delete the row inside the card body that shows `omerskywalker · @0merskywalker · email`. These links are already present in the left column and are redundant here. Removing them will clean up the card and reduce visual noise.
+
+After removing, add a simple single line in its place:
+- Text: `6+ years · Fintech · E-commerce · Enterprise`
+- Style: small monospace font, muted color (slate-400), font-size 0.72rem
+- This gives the card a credential line without repeating the social links
+
+---
+
+### 5. CARD VERTICAL ALIGNMENT — Raise the card
+
+The card is currently sitting too low relative to the left column content. Adjust the right column so the LinkedIn card starts at approximately the same vertical position as the "Open to work" badge in the left column. Remove any excess top margin or padding that is pushing the card down.
+
+---
+
+### 6. CLOSING STATEMENT — Tighten the gap
+
+Reduce the margin between the closing statement paragraph (`Whether you're hiring...`) and the LinkedIn card from its current size to `margin-bottom: 16px`. The text should feel like it directly introduces the card, not float above it.
+
+---
+
+### 7. DIVIDER — Add spacing above View LinkedIn Profile button
+
+Add a 1px horizontal rule (`rgba(255,255,255,0.08)`) between the credential line and the View LinkedIn Profile button, with `margin: 16px 0` to give the button its own zone at the bottom of the card.
+
+---
+
+Make no other changes anywhere on the page.

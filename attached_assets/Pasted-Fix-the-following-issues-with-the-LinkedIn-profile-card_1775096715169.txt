@@ -1,0 +1,47 @@
+Fix the following issues with the LinkedIn profile card in the Contact section. Do not change anything else.
+
+---
+
+### 1. AVATAR — Use the illustrated/cartoon portrait from the hero
+
+The avatar is currently showing the real photograph. Replace it with the exact same illustrated/cartoon avatar image used in the hero section of this site. Find the `<img>` tag or CSS background-image in the hero section that renders the illustrated portrait, and use the identical `src` or file reference for the avatar inside this card. Do not use any external URL — use the file already in the project.
+
+---
+
+### 2. AVATAR — Fix the overlap positioning
+
+The avatar must straddle the seam between the banner and the card body. It should appear to emerge from the bottom of the banner.
+
+Implementation:
+- Make the banner `position: relative` and `overflow: visible`
+- Place the avatar with `position: absolute`, `bottom: -40px`, `left: 20px`
+- Give the card body `padding-top: 56px` so the name text starts below the avatar
+- The avatar size should be 80px × 80px with `border-radius: 50%` and a `3px solid` border matching the card background color to create a clean cutout effect against the banner
+
+---
+
+### 3. RIGHT COLUMN — Pull everything up to align with the left column
+
+The right column is starting too far down the page. Fix this by:
+- Setting the Contact section's two-column grid to `align-items: start`
+- Removing any `margin-top` or `padding-top` on the right column that is pushing it down
+- The closing statement text and the card should begin at the same vertical position as the "Open to work" badge in the left column
+
+---
+
+### 4. CARD BODY — Add a tagline line
+
+Directly below `Dallas, Texas · Software Engineer` and above the LinkedIn URL line, add one line:
+- Text: `Building production systems since 2018.`
+- Style: small italic body font, muted color (slate-400), font-size 0.78rem
+- Margin: `4px 0`
+
+---
+
+### 5. DIVIDER — Confirm it exists above the CTA button
+
+Ensure there is a visible `1px` horizontal rule styled `rgba(255,255,255,0.08)` between the `6+ years · Fintech · E-commerce · Enterprise` credential line and the `View LinkedIn Profile →` button. Add `margin: 16px 0` on the rule. If it already exists, verify it is rendering visibly.
+
+---
+
+Make no other changes anywhere on the page.

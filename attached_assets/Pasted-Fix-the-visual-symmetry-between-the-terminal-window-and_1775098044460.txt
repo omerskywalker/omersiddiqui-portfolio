@@ -1,0 +1,36 @@
+Fix the visual symmetry between the terminal window and the LinkedIn card in the Contact section. Do not change anything else.
+
+---
+
+### 1. LINKEDIN CARD — Remove max-width constraint
+
+The LinkedIn card currently has a max-width set (approximately 380px) that is preventing it from filling its column. Remove any max-width on the LinkedIn card's outer container. The card should stretch to 100% of its column width, matching the terminal window's width exactly.
+
+---
+
+### 2. MATCH HEIGHTS — Make both panels equal height
+
+The two columns should use `align-items: stretch` on the grid so both columns grow to the same height. Then make both the terminal window and the LinkedIn card fill 100% of their respective column heights.
+
+Specifically:
+- Change the grid from `align-items: start` to `align-items: stretch`
+- The left column (`flex flex-col items-start`) should be changed to `flex flex-col` and given `height: 100%`
+- The terminal window outer container should be given `flex: 1` so it grows to fill remaining left column height after the pill badge
+- The LinkedIn card outer container should be given `height: 100%` so it fills the full right column height
+- The LinkedIn card inner body should use `display: flex; flex-direction: column;` with the `View LinkedIn Profile →` button section given `margin-top: auto` so it pins to the bottom of the card as the card grows taller
+
+---
+
+### 3. TERMINAL — Grow the code body to fill extra height
+
+As the terminal stretches taller, the code area (the dark body below the chrome bar) should expand rather than leaving a blank gap. Give the terminal body `flex: 1` so it fills available height. The blinking cursor and JSON content stay at the top of the body — do not vertically center them.
+
+---
+
+### 4. PILL BADGE alignment
+
+The "Open to work" pill badge sits above the terminal in the left column. It should remain `align-self: flex-start` — do not stretch it. Only the terminal below it should grow.
+
+---
+
+Make no other changes anywhere on the page.

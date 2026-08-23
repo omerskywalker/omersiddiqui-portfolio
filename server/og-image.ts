@@ -376,7 +376,7 @@ export async function generateOGImage(): Promise<Buffer> {
           },
         ],
       },
-    },
+    } as any,
     {
       width: 1200,
       height: 630,

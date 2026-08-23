@@ -1,0 +1,240 @@
+1. Hero Section — Primary Seniority Bottleneck
+What it signals now
+
+“I am a full-stack developer who builds beautiful apps.”
+
+That is mid-level coded, even if untrue.
+
+Specific junior signals
+
+“Full Stack Developer” title
+
+“Building beautiful applications…”
+
+Multiple CTAs competing for attention
+
+Avatar with glowing eyes (cool, but slightly brand-confused for fintech / ops roles)
+
+Senior rewrite (structure, not copy)
+
+Title (pick one direction):
+
+Software Engineer – Product & Systems
+
+Full-Stack Engineer focused on reliability & UX
+
+Product-minded Software Engineer (Fintech / Ops)
+
+Avoid tool titles. Seniors define problem domains, not stacks.
+
+Subheading should mention constraints, e.g.:
+
+reliability
+
+scale
+
+correctness
+
+long-term maintainability
+
+ambiguous requirements
+
+That’s how hiring managers filter.
+
+CTA cleanup
+
+You currently have:
+
+Learn More
+
+Get In Touch
+
+Download Resume
+
+Senior move:
+👉 Keep one primary CTA: “View Selected Work”
+Secondary: Resume (quiet)
+
+Multiple CTAs read as indecision.
+
+2. About Section — Over-Explaining Is the Enemy
+
+This section is well written, but it’s too long and too philosophical for a hiring manager scan.
+
+What works
+
+Metrics (100+ apps, Lumen/CenturyLink)
+
+Blending design + engineering
+
+Systems thinking
+
+What hurts senior signal
+
+INTP mention
+
+Dunning-Kruger reference
+
+Philosophy-heavy metaphors
+
+“I’ve learned humility…” paragraph
+
+These are good blog material, not portfolio material.
+
+Hiring managers think:
+
+“Is this person going to over-explain in meetings?”
+
+Senior edit rule
+
+About sections should answer only three questions:
+
+What problems do you solve?
+
+How do you approach trade-offs?
+
+Where have you done it before?
+
+Concrete recommendation
+
+Cut this section by 30–40%
+
+Remove:
+
+Personality typology
+
+Meta-learning commentary
+
+Philosophy framing
+
+Add instead (very senior signal):
+
+A short bullet list like:
+
+I prioritize correctness over cleverness
+
+I design for failure modes and partial data
+
+I favor boring, readable solutions that scale
+
+That alone upgrades perception.
+
+3. Projects Section — This Is Where Seniority Is Won or Lost
+Current state
+
+Visually excellent. Content-wise: still tool-forward.
+
+Example:
+
+“Debunk The Fud – React, TypeScript, Tailwind…”
+
+That’s a junior framing even though the project isn’t junior.
+
+Senior reframing template
+
+Each project card should implicitly answer:
+
+“Why should I trust this person with production systems?”
+
+Rewrite structure (example)
+
+Title:
+Debunk The FUD →
+Content Platform for High-Signal Educational Articles
+
+Description (2 lines max):
+
+Built to handle opinionated content, SEO constraints, and long-term maintainability with minimal editorial overhead.
+
+Then (small text or hover):
+
+Key decision: static generation over SSR
+
+Constraint: content must be credible & performant
+
+Trade-off: speed of iteration vs correctness
+
+You don’t need to explain everything — signal that you thought about it.
+
+Remove equal weighting
+
+Right now, all projects look equally important.
+
+Senior move:
+
+Pick 2 flagship projects
+
+Visually elevate them
+
+De-emphasize or archive the rest
+
+Senior engineers curate aggressively.
+
+4. Skills Section — This Is the Most “Junior-Coded” Area
+
+I’m going to be very direct here:
+
+❌ Skill levels (“Expert”, “Advanced”) hurt you
+
+Senior engineers do not self-grade publicly.
+
+Hiring managers think:
+
+“Expert according to whom?”
+
+Specific problems
+
+Skill cards + proficiency labels
+
+Even distribution of emphasis
+
+Large grid → checklist energy
+
+Senior alternative (much stronger)
+
+Option A – Collapse skills into categories
+
+Languages
+
+Frontend systems
+
+Backend systems
+
+Infra / tooling
+
+No levels. No cards. Just confidence.
+
+Option B – Replace with “How I Use These”
+Example:
+
+JavaScript / TypeScript – production UIs, shared component libraries
+
+React – data-heavy interfaces, derived state control
+
+SQL – reporting, analytics, correctness-first queries
+
+This screams experience.
+
+5. “Currently Learning” — Quietly Damaging Signal
+
+This section is honest, but honesty ≠ strategy.
+
+What hiring managers read
+
+“Still ramping.”
+
+That’s not what you want during interviews.
+
+Senior move
+
+Remove it entirely or
+
+Move it to:
+
+Footer
+
+Personal blog
+
+GitHub README
+
+Senior engineers learn constantly — they don’t advertise it.

@@ -1,0 +1,81 @@
+The current "Skills & technologies" section needs to be completely replaced. It reads as a junior-engineer feature — listing languages and tools in a grid implies the engineer is marketing their familiarity with specific technologies rather than their ability to solve hard problems. At the senior level, the work and the outcomes speak to the tools, not the other way around. Remove it entirely and replace it with a new section.
+
+---
+
+### WHAT TO REMOVE
+
+Delete the entire "Skills & technologies" section. This includes:
+- The section header ("— what I use" label + "Skills & technologies." heading)
+- All four category groups: Languages, Frontend Systems, Backend Systems, Infrastructure & Tooling
+- All individual skill cards and their descriptions
+- Remove "Skills" from the navbar links and footer nav links
+- Remove any scroll-target anchor associated with this section
+
+---
+
+### WHAT TO BUILD IN ITS PLACE
+
+Create a new section in the same position called "How I think" with the anchor id="approach".
+
+Update the navbar and footer nav links: replace "Skills" with "Approach" — clicking it should smooth-scroll to this new section.
+
+---
+
+### SECTION STRUCTURE
+
+The section should open with:
+- Section label (monospace, muted): `— how I think`
+- Heading: `Problems I'm` on line one, `*built for.*` on line two in the italic serif style matching the rest of the site
+
+Below the heading, a short single-sentence subheading in body text:
+`I don't specialize in tools. I specialize in outcomes — the tools are just how I get there.`
+
+Below that, render a 2x2 grid of four problem-domain cards on desktop (single column on mobile). Each card should have:
+- A large, low-opacity numeral in the background ("01", "02", "03", "04") matching the style already used in the philosophy/principles section
+- A bold card title
+- 2–3 sentences describing the problem domain and how Omer thinks about it
+- A "proof" line at the bottom — small monospace text listing where this showed up in real work
+- A subtle left border in the secondary accent color (soft indigo/violet)
+- Hover state: card lifts `transform: translateY(-4px)`, soft glow box-shadow
+
+---
+
+### THE FOUR CARDS — use this exact copy
+
+**Card 01 — Title: "Production systems under real constraints"**
+Body: Fintech correctness, high-traffic e-commerce, enterprise scale — I've built in environments where failure has a cost. I think in terms of failure modes first, happy paths second. Reliability isn't a feature you add at the end.
+Proof line: `→ JPMorgan · Macy's · Lumen Technologies`
+
+**Card 02 — Title: "Full-stack product ownership"**
+Body: I've taken features from design handoff to production deployment and owned the outcome. That means making calls across the stack — schema design, API contracts, UI state, observability — without waiting for someone else to draw the line.
+Proof line: `→ Commercial Banking onboarding · Parchment · Weekbook`
+
+**Card 03 — Title: "Open systems and long-term codebases"**
+Body: I'm drawn to work that compounds. That means writing code other engineers can reason about, contributing to open standards, and treating documentation as a first-class deliverable — not an afterthought.
+Proof line: `→ Bitcoin.org · Stratum V2 · internal tooling at scale`
+
+**Card 04 — Title: "New domains, fast"**
+Body: I've shipped in fintech, e-commerce, enterprise SaaS, and open-source protocol work. The specifics of any new domain are learnable. The habits that let you learn fast and ship safely — those are what I bring on day one.
+Proof line: `→ 4 domains · 6+ years · always shipping`
+
+---
+
+### STYLING RULES
+
+- Cards use the existing dark card background (`background: rgba(255,255,255,0.03)` or the site's existing card bg)
+- Left border: 3px solid secondary accent color (soft indigo `#818CF8`)
+- Background numeral: font-size ~7rem, opacity 0.05, absolute positioned top-right of card, non-selectable
+- Proof line: monospace font, font-size 0.75rem, color muted (slate-500 equivalent), margin-top auto (pin to bottom of card)
+- Card title: font-weight 600, slightly larger than body
+- Min card height: 220px on desktop so the numerals have room to breathe
+- Animate cards in on scroll using IntersectionObserver: stagger 100ms between each card, fade-in + translateY(20px) → translateY(0)
+- Respect prefers-reduced-motion
+
+---
+
+### WHAT NOT TO CHANGE
+
+- Do not modify any other section
+- Do not remove any existing content from Experience, Projects, About, or Contact
+- Preserve all existing tech stack tags on project cards — those are contextual and appropriate
+- Preserve the philosophy/principles section ("Correctness over cleverness" etc.) — that section stays as-is

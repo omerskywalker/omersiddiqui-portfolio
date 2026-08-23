@@ -1,0 +1,127 @@
+Make the following changes across the portfolio. Work through each numbered section independently. Do not change anything not explicitly mentioned.
+
+---
+
+### 1. HERO — Avatar padding on mobile
+
+The avatar is clipped at the bottom on mobile. Add `padding-bottom: 48px` (or `pb-12`) to the right column of the hero grid (the column containing the avatar) on mobile only. On desktop this padding should be 0 — use `pb-12 md:pb-0`.
+
+---
+
+### 2. HERO — Replace CTAs with single "Get in Touch" button
+
+Remove both existing CTA buttons: "Download Resume" and "Get in Touch".
+
+Replace them with a single button:
+- Text: `Get in Touch`
+- Style: filled orange accent background (match the exact orange used for italic headings and the Resume nav button)
+- Text color: dark/black for readability against the orange
+- On hover: `filter: brightness(0.9)`
+- On click: smooth scroll to `#contact`
+- Show on both mobile and desktop — this is the only CTA in the hero on all screen sizes
+- Width: `auto` — hugs content, does not stretch full width
+- Keep the existing button padding and border-radius from the site's button component
+
+Remove the `<a>` tag for Download Resume as well (the one that links to `/attached_assets/resume.pdf` in the hero). The nav Resume button covers this.
+
+---
+
+### 3. ABOUT SECTION — "How I approach software" label color
+
+Find the section label text `How I approach software` (the small label above the three principles cards: Correctness over cleverness, Constraint-driven design, Long-term maintainability).
+
+Change its color from the current muted/gray to white (`text-foreground` or equivalent). It should match the brightness of the card titles, not blend into body text.
+
+---
+
+### 4. PROJECTS SECTION — Rename section label and heading
+
+Find:
+- Section label: `— selected work`
+- Section heading line 1: `Things I've`
+- Section heading line 2 (italic): `built.`
+
+Replace with:
+- Section label: `— apps I've shipped`
+- Section heading line 1: `Things I've`
+- Section heading line 2 (italic): `shipped.`
+
+---
+
+### 5. PROJECTS — Fix card layout: screenshot top, details bottom on BOTH cards
+
+Currently Parchment has details on the left and screenshot on the right (side by side on desktop), and Weekbook has screenshot on the left and details on the right. On mobile they already stack but inconsistently.
+
+Standardize both cards to a consistent layout:
+
+**Desktop:** Keep the existing side-by-side grid layout (`md:grid-cols-[...]`) but ensure both cards have details on the LEFT and screenshot on the RIGHT. For Weekbook, swap the column order so the details column comes first and the screenshot column comes second.
+
+**Mobile (below md):** Both cards should stack vertically with screenshot on TOP and details on BOTTOM. Achieve this by:
+- Using `flex flex-col-reverse` on mobile for both cards so the screenshot (which is second in the DOM) appears first visually
+- Or reorder the DOM so screenshot is first child, details second child, and use `md:order-last` on the screenshot to push it right on desktop
+
+The goal: on mobile, both cards show screenshot → details. On desktop, both show details left → screenshot right.
+
+---
+
+### 6. PROJECTS — Parchment pill fixes
+
+Current pills: `Next.js 16`, `React 19`, `TypeScript`, `PostgreSQL`, `Drizzle ORM`, `CodeMirror 6`, `AWS S3`, `Vercel`
+
+Make these changes:
+- Replace `Drizzle ORM` with `Prisma`
+- Move `AWS S3` to immediately after `Prisma`
+
+Final pill order should be:
+`Next.js 16` · `React 19` · `TypeScript` · `PostgreSQL` · `Prisma` · `AWS S3` · `CodeMirror 6` · `Vercel`
+
+This creates two rows of three pills plus a final row of two — clean and balanced.
+
+---
+
+### 7. PROJECTS — Weekbook: Active Development pill text size
+
+The `Active Development` pill text is too large relative to the card title. Reduce the font size of the pill text to `0.65rem` (or `text-xs` if not already). The pill should feel like a status tag, not a headline.
+
+---
+
+### 8. PROJECTS — Weekbook: Add tech stack pills
+
+Add two new pills to the Weekbook tech stack:
+- `SMS Integration` (add after `Hotwire`)
+- `OpenAI API` (add after `SMS Integration`)
+
+Final Weekbook pill order:
+`Ruby on Rails` · `PostgreSQL` · `Hotwire` · `Tailwind CSS` · `SMS Integration` · `OpenAI API`
+
+---
+
+### 9. BUILD SECTION — Rename section label
+
+Find: `— consistency`
+Replace with: `— proof of work`
+
+The heading `Build` / `everyday.` stays exactly as-is.
+
+---
+
+### 10. APPROACH SECTION — Fix card 02 proof line
+
+Find in card 02 (End-to-end product work) the proof line:
+`→ Commercial Banking onboarding · Parchment · Weekbook`
+
+Replace with:
+`→ JPMC Digital Banking · Parchment · Weekbook`
+
+---
+
+### 11. CONTACT SECTION — Rename section label
+
+Find: `— let's build something`
+Replace with: `— reach out`
+
+The heading `Let's build` / `something.` stays exactly as-is.
+
+---
+
+Make no other changes anywhere on the page.

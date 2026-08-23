@@ -1,0 +1,90 @@
+Make the following targeted copy and functionality changes to the portfolio. Do not change anything else. Preserve all section layouts, styles, animations, and existing copy that is not explicitly mentioned below.
+
+---
+
+### 1. HERO — Remove the floating CTA button and replace it
+
+Remove the "Let's work together →" button at the top of the hero section.
+
+Replace it with a text-only CTA:
+- Text: `See what I'm building →`
+- On click: smooth scroll to the Parchment featured project card
+- Style: monospace font, muted color (slate-400), no button border or background — plain text with underline on hover, and the `→` shifts right 4px on hover via CSS transition
+- Position it in the same location the old button occupied
+
+---
+
+### 2. HERO — Replace the tagline with a dynamic day counter
+
+Find and replace this text:
+`Building reliable systems with a focus on correctness, maintainability, and real-world constraints. 6+ years across fintech, e-commerce, and enterprise.`
+
+Replace with:
+`[X] days of writing code that actually works — on my machine and yours.`
+
+Where [X] is a number calculated dynamically in JavaScript on page load:
+`Math.floor((new Date() - new Date('2018-09-05')) / (1000 * 60 * 60 * 24))`
+
+The number renders inline as plain text within the sentence. No separate stat component. No animation needed — just accurate on load.
+
+---
+
+### 3. ABOUT — Replace the section heading
+
+Find: `Engineered for the long run.`
+
+Replace with:
+- Line 1 (regular weight serif): `10,000+ hours in.`
+- Line 2 (italic, accent color): `Still finding better ways to do it.`
+
+Match the exact heading style used across other sections — same font sizes, same italic accent color treatment on the second line.
+
+---
+
+### 4. ABOUT — Replace the "drawn to" sentence
+
+Find: `I'm drawn to open, resilient systems and software that prioritizes transparency and long-term thinking.`
+
+Replace with:
+`I care about software that actually gets used — real users, real stakes, real feedback loops.`
+
+---
+
+### 5. ABOUT — Replace the hobbies line
+
+Find the entire block starting with `When I'm not shipping code, you can find me:` and the three links that follow (lifting weights, reading books, playing chess).
+
+Replace the entire block with this single line containing three inline hyperlinks:
+
+`When I'm not at a keyboard — lifting, reading, or climbing the ranks on chess.com.`
+
+Link targets:
+- "lifting" → https://x.com/0merskywalker — opens in new tab, rel="noopener noreferrer"
+- "reading" → https://www.goodreads.com/user/show/omerasiddiqui — opens in new tab, rel="noopener noreferrer"
+- "chess.com" → https://www.chess.com/member/omerskywalker — opens in new tab, rel="noopener noreferrer"
+
+Style: inline body text links using the existing site link style (accent color, no underline by default, underline on hover). Do not use the old monospace/tag styling — these are plain prose links.
+
+---
+
+### 6. ABOUT — Replace principle 01 description
+
+Under the heading "Correctness over cleverness", find:
+`Clear, predictable code that other engineers can reason about and maintain.`
+
+Replace with:
+`Good code explains itself. If you need a comment to explain what it does, the code is the problem.`
+
+---
+
+### 7. ABOUT — Replace principle 03 description
+
+Under the heading "Long-term maintainability", find:
+`Decisions that compound positively over time, not just ship fast today.`
+
+Replace with:
+`I'd rather slow down once and be intentional than spend years untangling the shortcut.`
+
+---
+
+Make no other changes. Do not modify any other section, layout, animation, or copy.
