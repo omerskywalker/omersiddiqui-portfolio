@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Mail, ArrowDown } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
-import { useQuery } from "@tanstack/react-query";
 import profilePhoto from "@assets/omerskywalker_1762452408837.jpeg";
 
 const NOISE_BG =
@@ -99,17 +98,6 @@ export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
   const heroRef = useRef<HTMLElement>(null);
 
-  const { data: contribData } = useQuery<{
-    contributions: Array<{ date: string; count: number }>;
-  }>({ queryKey: ["/api/github/contributions"] });
-
-  const thisYear = new Date().getFullYear().toString();
-  const commitsThisYear = contribData
-    ? contribData.contributions
-        .filter((d) => d.date.startsWith(thisYear))
-        .reduce((sum, d) => sum + d.count, 0)
-    : null;
-
   useEffect(() => {
     const onScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -189,7 +177,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <FlipCounter value={DAYS} />{" "}
-              days of writing code that actually works — on my machine and yours.
+              days of getting my hands dirty with production code.
             </motion.p>
 
             <motion.div
@@ -212,12 +200,9 @@ export default function Hero() {
             <div className="flex gap-6 pt-2">
               {[
                 { label: "7+", sub: "years" },
-                { label: "1M+", sub: "users served" },
+                { label: "6M", sub: "daily users" },
+                { label: "100+", sub: "internal tools" },
                 { label: "4", sub: "industries" },
-                {
-                  label: commitsThisYear !== null ? `${commitsThisYear}+` : "—",
-                  sub: "commits this year",
-                },
               ].map((stat, i) => (
                 <motion.div
                   key={stat.sub}

@@ -62,7 +62,7 @@ const domains = [
     metric: "Fortune 5",
     metricLabel: "$3.7T AUM",
     description:
-      "Built onboarding flows for the Commercial Investment Bank's digital banking app. Shipped full-stack features across product, design, and QA.",
+      "Built client onboarding flows for the Commercial Investment Bank's digital banking app. Worked full-stack with product, design, and QA, from requirements through release.",
     tags: ["React", "TypeScript", "Spring Boot", "AWS"],
     gradientStyle: { backgroundImage: "linear-gradient(135deg, rgba(17,122,202,0.14) 0%, rgba(17,122,202,0.03) 100%)" },
     accentStyle: { background: "rgba(17,122,202,0.18)", color: "#117ACA" },
@@ -74,7 +74,7 @@ const domains = [
     metric: "6M",
     metricLabel: "DAU",
     description:
-      "Shipped product discovery, personalization, and checkout features. Owned A/B tested experiences with measurable conversion impact.",
+      "Product discovery, personalization, and checkout for 6M daily users. Owned A/B-tested experiences and tracked their effect on conversion.",
     tags: ["Vue.js", "TypeScript", "GraphQL", "Redis"],
     gradientStyle: { backgroundImage: "linear-gradient(135deg, rgba(255,30,30,0.14) 0%, rgba(255,30,30,0.03) 100%)" },
     accentStyle: { background: "rgba(255,30,30,0.18)", color: "#FF2020" },
@@ -85,7 +85,7 @@ const domains = [
     metric: "30K+",
     metricLabel: "employees",
     description:
-      "Owned 100+ automation tools replacing manual workflows across departments. Built for scale, reliability, and cross-team adoption.",
+      "Owned 100+ internal automation tools that replaced manual workflows across departments, used by 30K+ employees.",
     tags: ["React", "Spring Boot", "SQL", "UiPath"],
     gradientStyle: { backgroundImage: "linear-gradient(135deg, rgba(0,153,204,0.14) 0%, rgba(0,153,204,0.03) 100%)" },
     accentStyle: { background: "rgba(0,153,204,0.22)", color: "#0099CC" },

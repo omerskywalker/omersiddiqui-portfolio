@@ -2,22 +2,23 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Highlight from "@/components/effects/Highlight";
 import SectionAccent from "@/components/effects/SectionAccent";
+import LayerStack from "@/components/LayerStack";
 
 const principles = [
   {
     num: "01",
-    title: "Clarity is the feature",
-    body: "I've read enough code at 11pm during an incident to know that \"clever\" is the enemy. The best code I've ever written looks obvious in hindsight. That's the goal."
+    title: "Boring code wins",
+    body: "I want the most robust solution with the least complexity. If it's hard to explain, it can probably be simplified."
   },
   {
     num: "02",
-    title: "Real systems fail in real ways",
-    body: "I don't design for the demo. I design for the retry, the timeout, the malformed input, the concurrent write. Constraints aren't obstacles — they're the actual job."
+    title: "Plan for failure",
+    body: "The happy path is the optimistic version. Experience shows in knowing where it breaks: retries, timeouts, bad inputs."
   },
   {
     num: "03",
-    title: "Be intentional or pay later",
-    body: "I'd rather have an uncomfortable conversation about scope today than explain a rewrite in six months. The shortcut always has a return address."
+    title: "What's the scope?",
+    body: "The first question before I write any code. Most of the problems I've seen started with an unclear answer."
   },
 ];
 
@@ -69,12 +70,13 @@ export default function About() {
                 <Highlight delay={0.6}>enterprise</Highlight> environments.
               </p>
               <p className="text-muted-foreground">
-                My work has spanned internal productivity platforms used by tens of thousands
+                My work has spanned internal productivity platforms used by thousands
                 of employees, consumer-facing apps serving millions of daily users, and fintech
-                products where correctness and data integrity are non-negotiable.
+                products in highly regulated environments.
               </p>
               <p className="text-muted-foreground">
-                I care about software that actually gets used — real users, real stakes, real feedback loops.
+                The biggest thing I've learned: two layers above the work is where you find out
+                why you're building it. Two layers below is where you find out how.
               </p>
 
               <p className="text-muted-foreground pt-1">
@@ -141,6 +143,15 @@ export default function About() {
             </div>
           </FadeUp>
         </div>
+
+        <FadeUp delay={0.1}>
+          <div className="mt-16 md:mt-20">
+            <p className="font-mono text-xs uppercase tracking-widest text-foreground mb-2">
+              — two layers up, two layers down
+            </p>
+            <LayerStack />
+          </div>
+        </FadeUp>
       </div>
     </section>
   );

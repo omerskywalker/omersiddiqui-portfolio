@@ -7,8 +7,6 @@ import ThemeToggleIcon from "@/components/effects/ThemeToggleIcon";
 const navLinks = [
   { label: "About", id: "about" },
   { label: "Experience", id: "experience" },
-  { label: "Work", id: "projects" },
-  { label: "Build", id: "build" },
   { label: "Approach", id: "approach" },
   { label: "Contact", id: "contact" },
 ];

@@ -4,27 +4,27 @@ import { useRef } from "react";
 const cards = [
   {
     num: "01",
-    title: "High-stakes production environments",
-    body: "When failure has a real cost — financial, reputational, operational — the engineering has to be different. I've built in fintech where a bug means bad data on a banking dashboard, and e-commerce where a bad deploy costs real revenue. That pressure sharpens how I work.",
+    title: "Where mistakes cost money",
+    body: "In fintech, a bug can mean wrong numbers on a banking dashboard. At Macy's, a bad deploy shows up in revenue. I check things twice.",
     proof: "→ JPMorgan · Macy's · Lumen Technologies",
   },
   {
     num: "02",
-    title: "End-to-end product work",
-    body: "I'm most useful when I own the whole problem — not just the ticket. Schema, API, UI, observability, deployment. I've gone from Figma file to production feature at JPMorgan, Macy's, and in my own projects. I don't need someone to hand me a slice.",
+    title: "Start to finish",
+    body: "Schema, API, UI, deploy. I'm happiest when I can follow a feature all the way through.",
     proof: "→ JPMC Digital Banking · Parchment · Weekbook",
   },
   {
     num: "03",
-    title: "Systems meant to last",
-    body: "I've inherited bad codebases and I've written code that outlasted me. The difference is intentionality — writing for the next engineer, treating documentation as part of the work, and making decisions you can defend a year later.",
+    title: "Code other people inherit",
+    body: "I've inherited bad codebases and I've written code that outlasted me. I try to write for whoever opens it next, and keep decisions I can still explain a year later.",
     proof: "→ Bitcoin.org · Stratum V2 · internal tooling at scale",
   },
   {
     num: "04",
-    title: "Environments I haven't seen yet",
-    body: "Fintech, enterprise, e-commerce, open-source protocol work — each one was new at some point. I pick up domains fast because I focus on the fundamentals first: what breaks, what scales, what the users actually need.",
-    proof: "→ 4 industries · 6+ years · still learning",
+    title: "Starting from zero",
+    body: "Each industry I've worked in was new to me once. I ramp up by asking what breaks, what scales, and who uses it.",
+    proof: "→ 4 industries · 7+ years",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function Approach() {
             <span className="text-primary italic">my best work.</span>
           </h2>
           <p className="mt-5 text-muted-foreground max-w-xl font-sans text-lg leading-relaxed">
-            Six years across four industries. Here's what I've learned about where I'm most effective.
+            Seven years, four industries. A few things I've figured out about how I work best.
           </p>
         </motion.div>
 

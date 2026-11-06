@@ -214,7 +214,7 @@ function LinkedInCard() {
         <div style={{ height: "1px", backgroundColor: "rgba(255,255,255,0.08)", margin: "12px 0" }} />
 
         <div className="font-mono text-slate-400" style={{ fontSize: "0.72rem", marginBottom: "4px" }}>
-          6+ years · Fintech · E-commerce · Enterprise
+          7+ years · Fintech · E-commerce · Enterprise
         </div>
 
         <div style={{ marginTop: "auto" }}>
@@ -302,8 +302,6 @@ export default function Contact() {
               {[
                 { id: "about", label: "About" },
                 { id: "experience", label: "Experience" },
-                { id: "projects", label: "Projects" },
-                { id: "build", label: "Build" },
                 { id: "approach", label: "Approach" },
                 { id: "contact", label: "Contact" },
               ].map(({ id, label }) => (
